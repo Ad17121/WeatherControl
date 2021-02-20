@@ -12,11 +12,13 @@ namespace WeatherControl
 {
     public partial class WindControl: UserControl
     {
+        
+
         Pen black = new Pen(Color.Black);
         Pen red = new Pen(Color.Red);
 
         private int _degrees;
-        private string _time;
+        private string _title;
         private int _temperature;
         private int _windSpeed;
         private Image _weatherImage;      
@@ -28,11 +30,11 @@ namespace WeatherControl
             set { _degrees = value; pictureBoxWind.Refresh(); }
         }
 
-        [Description("Time"), Category("Data")]
-        public string Time
+        [Description("Title"), Category("Data")]
+        public string Title
         {
-            get { return _time; }
-            set { _time = value; lblDay.Text = _time + ":00"; }
+            get { return _title; }
+            set { _title = value; lblDay.Text = _title; }
         }
 
         [Description("Image to display"), Category("Data")]
@@ -46,14 +48,14 @@ namespace WeatherControl
         public int Temperature
         {
             get { return _temperature;  }
-            set { _temperature = value; lblTemperature.Text = _temperature.ToString() + "­°C"; }
+            set { _temperature = value; lblTemperature.Text = string.Format("{0}°C",_temperature); }
         }
 
         [Description("Wind Speed"), Category("Data")]
         public int WindSpeed
         {
             get { return _windSpeed; }
-            set { _windSpeed = value; lblWindSpeed.Text = _windSpeed.ToString() + "­mph"; }
+            set { _windSpeed = value; lblWindSpeed.Text = string.Format("{0}mph", _windSpeed); }
         }
 
         public WindControl()
