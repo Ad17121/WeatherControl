@@ -19,7 +19,6 @@ namespace WeatherControl
         private int _windSpeed;
         private Image _weatherImage;
         private string _weather;
-        private int _rain;
         private int _feelsLike;
         private int _dewPoint;
         private int _pressure;
@@ -75,18 +74,11 @@ namespace WeatherControl
             set { _weather = value; updateExtraText(0, _weather); }
         }
 
-        [Description("Rainfall in mm"), Category("Data")]
-        public int Rain
-        {
-            get { return _rain; }
-            set { _rain = value; updateExtraText(1, string.Format("Rain: {0}mm", _rain)); }
-        }
-
         [Description("Feels like temperature"), Category("Data")]
         public int FeelsLike
         {
             get { return _feelsLike; }
-            set { _feelsLike = value; updateExtraText(2, string.Format("Feels Like: {0}°C",_feelsLike)); }
+            set { _feelsLike = value; updateExtraText(2, string.Format("Feels Like: {0}°C", _feelsLike)); }
         }
 
         [Description("Dew point temp"), Category("Data")]
@@ -120,7 +112,7 @@ namespace WeatherControl
         [Description("Miniumum Temperature"), Category("Data")]
         public int MinTemp
         {
-            get { return _min;  }
+            get { return _min; }
             set { _min = value; updateExtraText(7, string.Format("Min: {0}°C", _min)); }
         }
 
