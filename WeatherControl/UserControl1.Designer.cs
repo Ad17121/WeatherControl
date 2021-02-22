@@ -98,7 +98,7 @@
             this.txtExtra.Multiline = true;
             this.txtExtra.Name = "txtExtra";
             this.txtExtra.ReadOnly = true;
-            this.txtExtra.Size = new System.Drawing.Size(135, 191);
+            this.txtExtra.Size = new System.Drawing.Size(135, 194);
             this.txtExtra.TabIndex = 6;
             this.txtExtra.Text = "Clear: \r\nRain:\r\nFeels Like:\r\nDew point:\r\nPressure:\r\nClouds:\r\n \r\n \r\n \r\n ";
             this.txtExtra.Click += new System.EventHandler(this.WindControl_OnCLick);
