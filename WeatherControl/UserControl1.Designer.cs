@@ -116,6 +116,7 @@
             this.Controls.Add(this.pictureBoxWind);
             this.Name = "WindControl";
             this.Size = new System.Drawing.Size(56, 200);
+            this.Load += new System.EventHandler(this.WindControl_Load);
             this.Click += new System.EventHandler(this.WindControl_OnCLick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWind)).EndInit();
             this.ResumeLayout(false);

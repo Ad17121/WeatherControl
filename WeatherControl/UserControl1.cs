@@ -71,63 +71,63 @@ namespace WeatherControl
         public string Weather
         {
             get { return _weather; }
-            set { _weather = value; updateExtraText(0, _weather); }
+            set { _weather = value; updateExtraText(0, "Weather: "+_weather); }
         }
 
         [Description("Feels like temperature"), Category("Data")]
         public int FeelsLike
         {
             get { return _feelsLike; }
-            set { _feelsLike = value; updateExtraText(2, string.Format("Feels Like: {0}°C", _feelsLike)); }
+            set { _feelsLike = value; updateExtraText(1, string.Format("Feels Like: {0}°C", _feelsLike)); }
         }
 
         [Description("Dew point temp"), Category("Data")]
         public int DewPoint
         {
             get { return _dewPoint; }
-            set { _dewPoint = value; updateExtraText(3, string.Format("Dew Point: {0}°C", _dewPoint)); }
+            set { _dewPoint = value; updateExtraText(2, string.Format("Dew Point: {0}°C", _dewPoint)); }
         }
 
         [Description("Pressure"), Category("Data")]
         public int Pressure
         {
             get { return _pressure; }
-            set { _pressure = value; updateExtraText(4, string.Format("Pressure: {0}hPa", _pressure)); }
+            set { _pressure = value; updateExtraText(3, string.Format("Pressure: {0}hPa", _pressure)); }
         }
 
         [Description("Cloud coverage (percentage)")]
         public int Clouds
         {
             get { return _clouds; }
-            set { _clouds = value; updateExtraText(5, string.Format("Clouds: {0}%", _clouds)); }
+            set { _clouds = value; updateExtraText(4, string.Format("Clouds: {0}%", _clouds)); }
         }
 
         [Description("Minimum Temperature"), Category("Data")]
         public int MaxTemp
         {
             get { return _max; }
-            set { _max = value; updateExtraText(6, string.Format("Max: {0}°C", _max)); }
+            set { _max = value; updateExtraText(5, string.Format("Max: {0}°C", _max)); }
         }
 
         [Description("Miniumum Temperature"), Category("Data")]
         public int MinTemp
         {
             get { return _min; }
-            set { _min = value; updateExtraText(7, string.Format("Min: {0}°C", _min)); }
+            set { _min = value; updateExtraText(6, string.Format("Min: {0}°C", _min)); }
         }
 
         [Description("Dew point temp"), Category("Data")]
         public string Sunrise
         {
             get { return _sunrise; }
-            set { _sunrise = value; updateExtraText(8, string.Format("Sunrise: {0}", _sunrise)); }
+            set { _sunrise = value; updateExtraText(7, string.Format("Sunrise: {0}", _sunrise)); }
         }
 
         [Description("Dew point temp"), Category("Data")]
         public string Sunset
         {
             get { return _sunset; }
-            set { _sunset = value; updateExtraText(9, string.Format("Sunset: {0}", _sunset)); }
+            set { _sunset = value; updateExtraText(8,string.Format("Sunset: {0}", _sunset)); }
         }
 
         public void updateExtraText(int line, string text)
@@ -198,6 +198,11 @@ namespace WeatherControl
                 this.Width = 56;
 
             }
+        }
+
+        private void WindControl_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
